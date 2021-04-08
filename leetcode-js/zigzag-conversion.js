@@ -4,7 +4,7 @@
  * @param {number} numRows
  * @return {string}
  */
-s = "PAYPALISHIRING", numRows = 4
+s = "PAYPALISHIRING", numRows = 3
 var convert = function(s, numRows) {
   var arr = s.split('')
   var newArr = []
@@ -12,16 +12,17 @@ var convert = function(s, numRows) {
     return s
   }
   else{
-    var n = numRows
-    while(n--){
+    var n = 0
+    while(n < numRows){
       for(let i = 0;i < arr.length;i++){
-        if(i%(2*(numRows-1)) == n){
+        if(i%(2*(numRows-1)) == n || (i % (2*(numRows-1)) == (2*(numRows-1)-n))){
           newArr.push(arr[i])
         }
       }
-      console.log(newArr)
+      n++
+
     }
-    return newArr.reverse().join('')
+    return newArr.join('')
 
   }
 };
