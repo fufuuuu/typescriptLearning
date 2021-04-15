@@ -102,4 +102,4 @@ var isPalindrom = function(str,left,right){
   return right-left-1
 }
 
-console.log(longestPalindrome4(s))
+console.log(longestPalindrome(s))
