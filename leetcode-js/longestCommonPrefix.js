@@ -26,5 +26,5 @@ var longestCommonPrefix = function(strs) {
   return maxstr
 }
 
-strs = []
+strs = ['flawer','flower']
 console.log(longestCommonPrefix(strs))
