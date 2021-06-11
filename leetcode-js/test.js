@@ -1,6 +1,6 @@
 new Promise((resolve, reject) => {
   console.log('初始化');
-  if(true){
+  if(false){
     resolve();
   }
   else{
@@ -8,9 +8,10 @@ new Promise((resolve, reject) => {
   }
 })
 .then(() => {
+  console.log('执行「这个」');
   throw new Error('有哪里不对了');
 
-  console.log('执行「这个」”');
+  
 })
 .catch(() => {
   console.log('执行「那个」');
